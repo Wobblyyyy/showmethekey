@@ -70,7 +70,17 @@ static void smtk_keys_mapper_init(SmtkKeysMapper *mapper)
 	// It should be safe to add "Shift+" here, if you want to make some
 	// Shift modified key raw. For example ISO_Left_Tab here.
 	g_hash_table_insert(mapper->xkb_replace_names, g_strdup("ISO_Left_Tab"),
-			    g_strdup("Shift+Tab"));
+			    g_strdup("S-Tab"));
+	g_hash_table_insert(mapper->xkb_replace_names, g_strdup("BackSpace"),
+			    g_strdup("⌫"));
+	g_hash_table_insert(mapper->xkb_replace_names, g_strdup("Up"),
+			    g_strdup("⬆"));
+	g_hash_table_insert(mapper->xkb_replace_names, g_strdup("Down"),
+			    g_strdup("⬇"));
+	g_hash_table_insert(mapper->xkb_replace_names, g_strdup("Left"),
+			    g_strdup("⬅"));
+	g_hash_table_insert(mapper->xkb_replace_names, g_strdup("Right"),
+			    g_strdup("➡"));
 	g_hash_table_insert(mapper->xkb_replace_names, g_strdup("Meta_L"),
 			    g_strdup("Meta"));
 	g_hash_table_insert(mapper->xkb_replace_names, g_strdup("Meta_R"),
@@ -146,9 +156,9 @@ static void smtk_keys_mapper_init(SmtkKeysMapper *mapper)
 	g_hash_table_insert(mapper->xkb_replace_names, g_strdup("quotedbl"),
 			    g_strdup("\""));
 	g_hash_table_insert(mapper->xkb_replace_names, g_strdup("Return"),
-			    g_strdup("Enter"));
+			    g_strdup("⏎"));
 	g_hash_table_insert(mapper->xkb_replace_names, g_strdup("Escape"),
-			    g_strdup("Escape"));
+			    g_strdup("Esc"));
 	g_hash_table_insert(mapper->xkb_replace_names, g_strdup("comma"),
 			    g_strdup(","));
 	g_hash_table_insert(mapper->xkb_replace_names, g_strdup("less"),
@@ -162,7 +172,7 @@ static void smtk_keys_mapper_init(SmtkKeysMapper *mapper)
 	g_hash_table_insert(mapper->xkb_replace_names, g_strdup("question"),
 			    g_strdup("?"));
 	g_hash_table_insert(mapper->xkb_replace_names, g_strdup("space"),
-			    g_strdup("Space"));
+			    g_strdup(" "));
 	g_hash_table_insert(mapper->xkb_replace_names, g_strdup("Print"),
 			    g_strdup("PrintScreen"));
 	g_hash_table_insert(mapper->xkb_replace_names, g_strdup("Sys_Req"),
@@ -297,10 +307,10 @@ char *smtk_keys_mapper_get_composed(SmtkKeysMapper *mapper, SmtkEvent *event)
 	// I'd like to call it "Super".
 	if (xkb_state_mod_name_is_active(mapper->xkb_state, XKB_MOD_NAME_LOGO,
 					 XKB_STATE_MODS_EFFECTIVE) > 0)
-		g_string_append(buffer, "Super+");
+		g_string_append(buffer, "SU-");
 	if (xkb_state_mod_name_is_active(mapper->xkb_state, XKB_MOD_NAME_CTRL,
 					 XKB_STATE_MODS_EFFECTIVE) > 0)
-		g_string_append(buffer, "Ctrl+");
+		g_string_append(buffer, "C-");
 	// Shift+Alt will get Meta_L and Meta_R,
 	// and we should not add Alt for it.
 	// I think Meta should be a modifier, but Xkbcommon does not.
@@ -308,7 +318,7 @@ char *smtk_keys_mapper_get_composed(SmtkKeysMapper *mapper, SmtkEvent *event)
 	if (xkb_state_mod_name_is_active(mapper->xkb_state, XKB_MOD_NAME_ALT,
 					 XKB_STATE_MODS_EFFECTIVE) > 0 &&
 	    strcmp(main_key, "Meta") != 0)
-		g_string_append(buffer, "Alt+");
+		g_string_append(buffer, "A-");
 	// Shift is a little bit complex,
 	// it can be consumed by capitalization transformation,
 	// so we check it here. This prevents text like Shift+! but allows
@@ -319,7 +329,7 @@ char *smtk_keys_mapper_get_composed(SmtkKeysMapper *mapper, SmtkEvent *event)
 		    mapper->xkb_state, xkb_key_code,
 		    xkb_keymap_mod_get_index(mapper->xkb_keymap,
 					     XKB_MOD_NAME_SHIFT)))
-		g_string_append(buffer, "Shift+");
+		g_string_append(buffer, "S-");
 	g_string_append(buffer, main_key);
 	g_free(main_key);
 	return g_string_free(buffer, FALSE);

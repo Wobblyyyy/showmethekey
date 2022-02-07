@@ -1,0 +1,62 @@
+[
+  {
+    "directory": "/home/colin/IdeaProjects/showmethekey/build",
+    "command": "cc -Ishowmethekey-cli/showmethekey-cli.p -Ishowmethekey-cli -I../showmethekey-cli -I. -I.. -I/usr/include/libevdev-1.0/ -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c11 -g -pthread -D__DEBUG__ -MD -MQ showmethekey-cli/showmethekey-cli.p/main.c.o -MF showmethekey-cli/showmethekey-cli.p/main.c.o.d -o showmethekey-cli/showmethekey-cli.p/main.c.o -c ../showmethekey-cli/main.c",
+    "file": "../showmethekey-cli/main.c",
+    "output": "showmethekey-cli/showmethekey-cli.p/main.c.o"
+  },
+  {
+    "directory": "/home/colin/IdeaProjects/showmethekey/build",
+    "command": "cc -Ishowmethekey-gtk/showmethekey-gtk.p -Ishowmethekey-gtk -I../showmethekey-gtk -I. -I.. -I/usr/include/gtk-3.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -I/usr/include/gio-unix-2.0 -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/fribidi -I/usr/include/atk-1.0 -I/usr/include/pixman-1 -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/x86_64-linux-gnu -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/json-glib-1.0 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c11 -g -pthread -D__DEBUG__ -MD -MQ showmethekey-gtk/showmethekey-gtk.p/meson-generated_.._smtk-resources.c.o -MF showmethekey-gtk/showmethekey-gtk.p/meson-generated_.._smtk-resources.c.o.d -o showmethekey-gtk/showmethekey-gtk.p/meson-generated_.._smtk-resources.c.o -c showmethekey-gtk/smtk-resources.c",
+    "file": "showmethekey-gtk/smtk-resources.c",
+    "output": "showmethekey-gtk/showmethekey-gtk.p/meson-generated_.._smtk-resources.c.o"
+  },
+  {
+    "directory": "/home/colin/IdeaProjects/showmethekey/build",
+    "command": "cc -Ishowmethekey-gtk/showmethekey-gtk.p -Ishowmethekey-gtk -I../showmethekey-gtk -I. -I.. -I/usr/include/gtk-3.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -I/usr/include/gio-unix-2.0 -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/fribidi -I/usr/include/atk-1.0 -I/usr/include/pixman-1 -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/x86_64-linux-gnu -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/json-glib-1.0 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c11 -g -pthread -D__DEBUG__ -MD -MQ showmethekey-gtk/showmethekey-gtk.p/meson-generated_.._smtk-enum-types.c.o -MF showmethekey-gtk/showmethekey-gtk.p/meson-generated_.._smtk-enum-types.c.o.d -o showmethekey-gtk/showmethekey-gtk.p/meson-generated_.._smtk-enum-types.c.o -c showmethekey-gtk/smtk-enum-types.c",
+    "file": "showmethekey-gtk/smtk-enum-types.c",
+    "output": "showmethekey-gtk/showmethekey-gtk.p/meson-generated_.._smtk-enum-types.c.o"
+  },
+  {
+    "directory": "/home/colin/IdeaProjects/showmethekey/build",
+    "command": "cc -Ishowmethekey-gtk/showmethekey-gtk.p -Ishowmethekey-gtk -I../showmethekey-gtk -I. -I.. -I/usr/include/gtk-3.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -I/usr/include/gio-unix-2.0 -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/fribidi -I/usr/include/atk-1.0 -I/usr/include/pixman-1 -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/x86_64-linux-gnu -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/json-glib-1.0 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c11 -g -pthread -D__DEBUG__ -MD -MQ showmethekey-gtk/showmethekey-gtk.p/main.c.o -MF showmethekey-gtk/showmethekey-gtk.p/main.c.o.d -o showmethekey-gtk/showmethekey-gtk.p/main.c.o -c ../showmethekey-gtk/main.c",
+    "file": "../showmethekey-gtk/main.c",
+    "output": "showmethekey-gtk/showmethekey-gtk.p/main.c.o"
+  },
+  {
+    "directory": "/home/colin/IdeaProjects/showmethekey/build",
+    "command": "cc -Ishowmethekey-gtk/showmethekey-gtk.p -Ishowmethekey-gtk -I../showmethekey-gtk -I. -I.. -I/usr/include/gtk-3.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -I/usr/include/gio-unix-2.0 -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/fribidi -I/usr/include/atk-1.0 -I/usr/include/pixman-1 -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/x86_64-linux-gnu -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/json-glib-1.0 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c11 -g -pthread -D__DEBUG__ -MD -MQ showmethekey-gtk/showmethekey-gtk.p/smtk-app.c.o -MF showmethekey-gtk/showmethekey-gtk.p/smtk-app.c.o.d -o showmethekey-gtk/showmethekey-gtk.p/smtk-app.c.o -c ../showmethekey-gtk/smtk-app.c",
+    "file": "../showmethekey-gtk/smtk-app.c",
+    "output": "showmethekey-gtk/showmethekey-gtk.p/smtk-app.c.o"
+  },
+  {
+    "directory": "/home/colin/IdeaProjects/showmethekey/build",
+    "command": "cc -Ishowmethekey-gtk/showmethekey-gtk.p -Ishowmethekey-gtk -I../showmethekey-gtk -I. -I.. -I/usr/include/gtk-3.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -I/usr/include/gio-unix-2.0 -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/fribidi -I/usr/include/atk-1.0 -I/usr/include/pixman-1 -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/x86_64-linux-gnu -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/json-glib-1.0 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c11 -g -pthread -D__DEBUG__ -MD -MQ showmethekey-gtk/showmethekey-gtk.p/smtk-app-win.c.o -MF showmethekey-gtk/showmethekey-gtk.p/smtk-app-win.c.o.d -o showmethekey-gtk/showmethekey-gtk.p/smtk-app-win.c.o -c ../showmethekey-gtk/smtk-app-win.c",
+    "file": "../showmethekey-gtk/smtk-app-win.c",
+    "output": "showmethekey-gtk/showmethekey-gtk.p/smtk-app-win.c.o"
+  },
+  {
+    "directory": "/home/colin/IdeaProjects/showmethekey/build",
+    "command": "cc -Ishowmethekey-gtk/showmethekey-gtk.p -Ishowmethekey-gtk -I../showmethekey-gtk -I. -I.. -I/usr/include/gtk-3.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -I/usr/include/gio-unix-2.0 -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/fribidi -I/usr/include/atk-1.0 -I/usr/include/pixman-1 -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/x86_64-linux-gnu -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/json-glib-1.0 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c11 -g -pthread -D__DEBUG__ -MD -MQ showmethekey-gtk/showmethekey-gtk.p/smtk-keys-win.c.o -MF showmethekey-gtk/showmethekey-gtk.p/smtk-keys-win.c.o.d -o showmethekey-gtk/showmethekey-gtk.p/smtk-keys-win.c.o -c ../showmethekey-gtk/smtk-keys-win.c",
+    "file": "../showmethekey-gtk/smtk-keys-win.c",
+    "output": "showmethekey-gtk/showmethekey-gtk.p/smtk-keys-win.c.o"
+  },
+  {
+    "directory": "/home/colin/IdeaProjects/showmethekey/build",
+    "command": "cc -Ishowmethekey-gtk/showmethekey-gtk.p -Ishowmethekey-gtk -I../showmethekey-gtk -I. -I.. -I/usr/include/gtk-3.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -I/usr/include/gio-unix-2.0 -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/fribidi -I/usr/include/atk-1.0 -I/usr/include/pixman-1 -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/x86_64-linux-gnu -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/json-glib-1.0 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c11 -g -pthread -D__DEBUG__ -MD -MQ showmethekey-gtk/showmethekey-gtk.p/smtk-keys-emitter.c.o -MF showmethekey-gtk/showmethekey-gtk.p/smtk-keys-emitter.c.o.d -o showmethekey-gtk/showmethekey-gtk.p/smtk-keys-emitter.c.o -c ../showmethekey-gtk/smtk-keys-emitter.c",
+    "file": "../showmethekey-gtk/smtk-keys-emitter.c",
+    "output": "showmethekey-gtk/showmethekey-gtk.p/smtk-keys-emitter.c.o"
+  },
+  {
+    "directory": "/home/colin/IdeaProjects/showmethekey/build",
+    "command": "cc -Ishowmethekey-gtk/showmethekey-gtk.p -Ishowmethekey-gtk -I../showmethekey-gtk -I. -I.. -I/usr/include/gtk-3.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -I/usr/include/gio-unix-2.0 -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/fribidi -I/usr/include/atk-1.0 -I/usr/include/pixman-1 -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/x86_64-linux-gnu -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/json-glib-1.0 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c11 -g -pthread -D__DEBUG__ -MD -MQ showmethekey-gtk/showmethekey-gtk.p/smtk-keys-mapper.c.o -MF showmethekey-gtk/showmethekey-gtk.p/smtk-keys-mapper.c.o.d -o showmethekey-gtk/showmethekey-gtk.p/smtk-keys-mapper.c.o -c ../showmethekey-gtk/smtk-keys-mapper.c",
+    "file": "../showmethekey-gtk/smtk-keys-mapper.c",
+    "output": "showmethekey-gtk/showmethekey-gtk.p/smtk-keys-mapper.c.o"
+  },
+  {
+    "directory": "/home/colin/IdeaProjects/showmethekey/build",
+    "command": "cc -Ishowmethekey-gtk/showmethekey-gtk.p -Ishowmethekey-gtk -I../showmethekey-gtk -I. -I.. -I/usr/include/gtk-3.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -I/usr/include/gio-unix-2.0 -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/fribidi -I/usr/include/atk-1.0 -I/usr/include/pixman-1 -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/x86_64-linux-gnu -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/json-glib-1.0 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c11 -g -pthread -D__DEBUG__ -MD -MQ showmethekey-gtk/showmethekey-gtk.p/smtk-event.c.o -MF showmethekey-gtk/showmethekey-gtk.p/smtk-event.c.o.d -o showmethekey-gtk/showmethekey-gtk.p/smtk-event.c.o -c ../showmethekey-gtk/smtk-event.c",
+    "file": "../showmethekey-gtk/smtk-event.c",
+    "output": "showmethekey-gtk/showmethekey-gtk.p/smtk-event.c.o"
+  }
+]

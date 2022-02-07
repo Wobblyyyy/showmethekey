@@ -116,7 +116,7 @@ static void smtk_keys_win_on_size_allocate(SmtkKeysWin *win,
 	// I am not sure why the avaliable height * PANGO_SCALE is too big,
 	// just make it smaller, also too big will have less chars.
 	pango_font_description_set_size(font,
-					allocation->height * 0.3 * PANGO_SCALE);
+					allocation->height * 0.1 * PANGO_SCALE);
 
 	pango_layout_set_font_description(layout, font);
 	pango_font_description_free(font);
