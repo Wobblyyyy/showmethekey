@@ -18,6 +18,7 @@ struct _SmtkAppWin {
 	GtkWidget *width_entry;
 	GtkWidget *height_entry;
 	GtkWidget *timeout_entry;
+    GtkWidget *fontsizeentry;
 	GtkWidget *keys_win;
 };
 G_DEFINE_TYPE(SmtkAppWin, smtk_app_win, GTK_TYPE_APPLICATION_WINDOW)
@@ -30,6 +31,7 @@ static void smtk_app_win_enable(SmtkAppWin *win)
 	gtk_widget_set_sensitive(win->width_entry, TRUE);
 	gtk_widget_set_sensitive(win->height_entry, TRUE);
 	gtk_widget_set_sensitive(win->timeout_entry, TRUE);
+	gtk_widget_set_sensitive(win->fontsizeentry, TRUE);
 }
 
 static void smtk_app_win_disable(SmtkAppWin *win)
@@ -40,6 +42,7 @@ static void smtk_app_win_disable(SmtkAppWin *win)
 	gtk_widget_set_sensitive(win->width_entry, FALSE);
 	gtk_widget_set_sensitive(win->height_entry, FALSE);
 	gtk_widget_set_sensitive(win->timeout_entry, FALSE);
+	gtk_widget_set_sensitive(win->fontsizeentry, FALSE);
 }
 
 static void smtk_app_win_keys_win_on_destroy(SmtkAppWin *win,
@@ -78,11 +81,14 @@ static void smtk_app_win_on_keys_win_switch_active(SmtkAppWin *win,
 				GTK_SPIN_BUTTON(win->height_entry));
 			gint timeout = gtk_spin_button_get_value_as_int(
 				GTK_SPIN_BUTTON(win->timeout_entry));
+            gint fontsize = gtk_spin_button_get_value_as_int(
+                GTK_SPIN_BUTTON(win->fontsizeentry));
 			height = height <= 0 ? 200 : height;
 			g_debug("Size: %dx%d.", width, height);
 			GError *error = NULL;
 			win->keys_win = smtk_keys_win_new(
-				show_mouse, mode, width, height, timeout, &error);
+				show_mouse, mode, width, height, timeout, 
+                fontsize, &error);
 			if (win->keys_win == NULL) {
 				g_warning("%s", error->message);
 				g_error_free(error);
@@ -161,6 +167,8 @@ static void smtk_app_win_init(SmtkAppWin *win)
 
 	gtk_spin_button_set_range(GTK_SPIN_BUTTON(win->timeout_entry), 0, 30000);
 	gtk_spin_button_set_increments(GTK_SPIN_BUTTON(win->timeout_entry), 100, 1000);
+	gtk_spin_button_set_range(GTK_SPIN_BUTTON(win->fontsizeentry), 1, 1000);
+	gtk_spin_button_set_increments(GTK_SPIN_BUTTON(win->fontsizeentry), 10, 100);
 
 	win->settings = g_settings_new("one.alynx.showmethekey");
 	g_settings_bind(win->settings, "show-mouse", win->mouse_switch,
@@ -174,6 +182,8 @@ static void smtk_app_win_init(SmtkAppWin *win)
 	g_settings_bind(win->settings, "height", win->height_entry, "value",
 			G_SETTINGS_BIND_DEFAULT);
 	g_settings_bind(win->settings, "timeout", win->timeout_entry, "value",
+			G_SETTINGS_BIND_DEFAULT);
+	g_settings_bind(win->settings, "fontsizeentry", win->fontsizeentry, "value",
 			G_SETTINGS_BIND_DEFAULT);
 
 	if (g_settings_get_boolean(win->settings, "first-time")) {
@@ -231,6 +241,8 @@ static void smtk_app_win_class_init(SmtkAppWinClass *win_class)
 					     SmtkAppWin, height_entry);
 	gtk_widget_class_bind_template_child(GTK_WIDGET_CLASS(win_class),
 					     SmtkAppWin, timeout_entry);
+	gtk_widget_class_bind_template_child(GTK_WIDGET_CLASS(win_class),
+					     SmtkAppWin, fontsizeentry);
 	gtk_widget_class_bind_template_callback(
 		GTK_WIDGET_CLASS(win_class),
 		smtk_app_win_on_keys_win_switch_active);

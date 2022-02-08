@@ -257,6 +257,30 @@
             </child>
           </object>
         </child>
+        <child>
+          <object class="GtkBox">
+            <property name="visible">true</property>
+            <property name="orientation">horizontal</property>
+            <child>
+              <object class="GtkLabel">
+                <property name="visible">true</property>
+                <property name="label" translatable="yes">Font size coefficient</property>
+                <property name="hexpand">true</property>
+                <property name="halign">start</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkSpinButton" id="fontsizeentry">
+                <property name="visible">true</property>
+                <property name="hexpand">true</property>
+                <property name="halign">end</property>
+                <!-- Keep 0 digit after dot because we are using it as int. -->
+                <property name="digits">0</property>
+                <property name="text">0</property>
+              </object>
+            </child>
+          </object>
+        </child>
       </object>
     </child>
   </template>
