@@ -9,6 +9,8 @@ original project, see the [original repository](https://github.com/AlynxZhou/sho
 # Install
 
 ## Install with scripts
+Note: all of the following assumes you're running a Linux machine with
+`apt` installed. If you're not, you're kind of out of luck... sorry!
 
 If you're lazy and just want to copy-paste a command, here you go.
 ```
@@ -49,7 +51,7 @@ $ ./install.sh
 ### Build
 
 ```
-$ git clone https://github.com/AlynxZhou/showmethekey.git
+$ git clone https://github.com/Wobblyyyy/showmethekey.git
 $ cd showmethekey
 $ mkdir build && cd build && meson setup --prefix=/usr . .. && meson compile && meson install
 $ showmethekey-gtk
