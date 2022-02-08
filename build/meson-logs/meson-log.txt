@@ -1,6 +1,6 @@
-Build started at 2022-02-07T20:30:14.488514
+Build started at 2022-02-07T22:02:01.182860
 Main binary: /usr/bin/python3
-Build Options: -Dprefix=/usr -Dbackend=ninja
+Build Options: -Dprefix=/usr
 Python system: Linux
 The Meson build system
 Version: 0.56.2
@@ -9,9 +9,41 @@ Build dir: /home/colin/IdeaProjects/showmethekey/build
 Build type: native build
 Project name: showmethekey
 Project version: 1.5.0
+None of 'CC' are defined in the environment, not changing global flags.
+None of 'CFLAGS' are defined in the environment, not changing global flags.
+None of 'LDFLAGS' are defined in the environment, not changing global flags.
+None of 'CPPFLAGS' are defined in the environment, not changing global flags.
+None of 'CC_LD' are defined in the environment, not changing global flags.
+Sanity testing C compiler: cc
+Is cross compiler: False.
+None of 'CC_LD' are defined in the environment, not changing global flags.
+Sanity check compiler command line: cc /home/colin/IdeaProjects/showmethekey/build/meson-private/sanitycheckc.c -o /home/colin/IdeaProjects/showmethekey/build/meson-private/sanitycheckc.exe -pipe -D_FILE_OFFSET_BITS=64
+Sanity check compile stdout:
+
+-----
+Sanity check compile stderr:
+
+-----
+Running test binary command: /home/colin/IdeaProjects/showmethekey/build/meson-private/sanitycheckc.exe
 C compiler for the host machine: cc (gcc 11.2.0 "cc (Ubuntu 11.2.0-7ubuntu2) 11.2.0")
 C linker for the host machine: cc ld.bfd 2.37
 None of 'AR' are defined in the environment, not changing global flags.
+None of 'CC' are defined in the environment, not changing global flags.
+None of 'CFLAGS' are defined in the environment, not changing global flags.
+None of 'LDFLAGS' are defined in the environment, not changing global flags.
+None of 'CPPFLAGS' are defined in the environment, not changing global flags.
+None of 'CC_LD' are defined in the environment, not changing global flags.
+Sanity testing C compiler: cc
+Is cross compiler: False.
+None of 'CC_LD' are defined in the environment, not changing global flags.
+Sanity check compiler command line: cc /home/colin/IdeaProjects/showmethekey/build/meson-private/sanitycheckc.c -o /home/colin/IdeaProjects/showmethekey/build/meson-private/sanitycheckc.exe -pipe -D_FILE_OFFSET_BITS=64
+Sanity check compile stdout:
+
+-----
+Sanity check compile stderr:
+
+-----
+Running test binary command: /home/colin/IdeaProjects/showmethekey/build/meson-private/sanitycheckc.exe
 C compiler for the build machine: cc (gcc 11.2.0 "cc (Ubuntu 11.2.0-7ubuntu2) 11.2.0")
 C linker for the build machine: cc ld.bfd 2.37
 None of 'AR' are defined in the environment, not changing global flags.
@@ -22,40 +54,29 @@ Host machine cpu: x86_64
 Target machine cpu family: x86_64
 Target machine cpu: x86_64
 Configuring config.h using configuration
-Dependency libevdev found: YES 1.11.0 (cached)
-Dependency libudev found: YES 248 (cached)
-Dependency libinput found: YES 1.18.1 (cached)
-Dependency threads found: YES unknown (cached)
-Dependency gtk+-3.0 found: YES 3.24.30 (cached)
-Dependency glib-2.0 found: YES 2.68.4 (cached)
-Dependency json-glib-1.0 found: YES 1.6.2 (cached)
-Dependency gio-2.0 found: YES 2.68.4 (cached)
-Dependency cairo found: YES 1.16.0 (cached)
-Dependency pango found: YES 1.48.10 (cached)
-Dependency xkbcommon found: YES 1.3.0 (cached)
-Pkg-config binary for MachineChoice.BUILD is not cached.
+Pkg-config binary for MachineChoice.HOST is not cached.
 None of 'PKG_CONFIG' are defined in the environment, not changing global flags.
 Pkg-config binary missing from cross or native file, or env var undefined.
 Trying a default Pkg-config fallback at pkg-config
 Found pkg-config: /usr/bin/pkg-config (0.29.2)
-Determining dependency 'glib-2.0' with pkg-config executable '/usr/bin/pkg-config'
+Determining dependency 'libevdev' with pkg-config executable '/usr/bin/pkg-config'
 PKG_CONFIG_PATH: 
-Called `/usr/bin/pkg-config --modversion glib-2.0` -> 0
-2.68.4
+Called `/usr/bin/pkg-config --modversion libevdev` -> 0
+1.11.0
 PKG_CONFIG_PATH: 
-Called `/usr/bin/pkg-config --cflags glib-2.0` -> 0
--I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include
+Called `/usr/bin/pkg-config --cflags libevdev` -> 0
+-I/usr/include/libevdev-1.0/
 PKG_CONFIG_PATH: 
-Called `/usr/bin/pkg-config glib-2.0 --libs` -> 0
--L/usr/lib/x86_64-linux-gnu -lglib-2.0
+Called `/usr/bin/pkg-config libevdev --libs` -> 0
+-L/usr/lib/x86_64-linux-gnu -levdev
 PKG_CONFIG_PATH: 
-Called `/usr/bin/pkg-config glib-2.0 --libs` -> 0
--lglib-2.0
+Called `/usr/bin/pkg-config libevdev --libs` -> 0
+-levdev
 None of 'PKG_CONFIG_PATH' are defined in the environment, not changing global flags.
 None of 'CC_LD' are defined in the environment, not changing global flags.
 Running compile:
-Working directory:  /home/colin/IdeaProjects/showmethekey/build/meson-private/tmp1y12ul8y
-Command line:  cc /home/colin/IdeaProjects/showmethekey/build/meson-private/tmp1y12ul8y/testfile.c -o /home/colin/IdeaProjects/showmethekey/build/meson-private/tmp1y12ul8y/output.exe -pipe -D_FILE_OFFSET_BITS=64 -O0 
+Working directory:  /home/colin/IdeaProjects/showmethekey/build/meson-private/tmp756txi8j
+Command line:  cc /home/colin/IdeaProjects/showmethekey/build/meson-private/tmp756txi8j/testfile.c -o /home/colin/IdeaProjects/showmethekey/build/meson-private/tmp756txi8j/output.exe -pipe -D_FILE_OFFSET_BITS=64 -O0 
 
 Code:
  #include<stdio.h>
@@ -76,8 +97,8 @@ Program stderr:
 
 
 Running compile:
-Working directory:  /home/colin/IdeaProjects/showmethekey/build/meson-private/tmpmyfkj5yp
-Command line:  cc /home/colin/IdeaProjects/showmethekey/build/meson-private/tmpmyfkj5yp/testfile.c -o /home/colin/IdeaProjects/showmethekey/build/meson-private/tmpmyfkj5yp/output.obj -pipe -c -D_FILE_OFFSET_BITS=64 -O0 --print-search-dirs 
+Working directory:  /home/colin/IdeaProjects/showmethekey/build/meson-private/tmp96hddra6
+Command line:  cc /home/colin/IdeaProjects/showmethekey/build/meson-private/tmp96hddra6/testfile.c -o /home/colin/IdeaProjects/showmethekey/build/meson-private/tmp96hddra6/output.obj -pipe -c -D_FILE_OFFSET_BITS=64 -O0 --print-search-dirs 
 
 Code:
  
@@ -88,6 +109,171 @@ libraries: =/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/11/.
 
 Compiler stderr:
  
+Run-time dependency libevdev found: YES 1.11.0
+Pkg-config binary for MachineChoice.HOST is cached.
+Determining dependency 'libudev' with pkg-config executable '/usr/bin/pkg-config'
+PKG_CONFIG_PATH: 
+Called `/usr/bin/pkg-config --modversion libudev` -> 0
+248
+PKG_CONFIG_PATH: 
+Called `/usr/bin/pkg-config --cflags libudev` -> 0
+
+PKG_CONFIG_PATH: 
+Called `/usr/bin/pkg-config libudev --libs` -> 0
+-L/usr/lib/x86_64-linux-gnu -ludev
+PKG_CONFIG_PATH: 
+Called `/usr/bin/pkg-config libudev --libs` -> 0
+-ludev
+None of 'PKG_CONFIG_PATH' are defined in the environment, not changing global flags.
+Run-time dependency libudev found: YES 248
+Pkg-config binary for MachineChoice.HOST is cached.
+Determining dependency 'libinput' with pkg-config executable '/usr/bin/pkg-config'
+PKG_CONFIG_PATH: 
+Called `/usr/bin/pkg-config --modversion libinput` -> 0
+1.18.1
+PKG_CONFIG_PATH: 
+Called `/usr/bin/pkg-config --cflags libinput` -> 0
+
+PKG_CONFIG_PATH: 
+Called `/usr/bin/pkg-config libinput --libs` -> 0
+-L/usr/lib/x86_64-linux-gnu -linput
+PKG_CONFIG_PATH: 
+Called `/usr/bin/pkg-config libinput --libs` -> 0
+-linput
+None of 'PKG_CONFIG_PATH' are defined in the environment, not changing global flags.
+Run-time dependency libinput found: YES 1.18.1
+Run-time dependency threads found: YES
+Pkg-config binary for MachineChoice.HOST is cached.
+Determining dependency 'gtk+-3.0' with pkg-config executable '/usr/bin/pkg-config'
+PKG_CONFIG_PATH: 
+Called `/usr/bin/pkg-config --modversion gtk+-3.0` -> 0
+3.24.30
+PKG_CONFIG_PATH: 
+Called `/usr/bin/pkg-config --cflags gtk+-3.0` -> 0
+-pthread -I/usr/include/gtk-3.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -I/usr/include/gtk-3.0 -I/usr/include/gio-unix-2.0 -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/harfbuzz -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libpng16 -I/usr/include/x86_64-linux-gnu -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include
+PKG_CONFIG_PATH: 
+Called `/usr/bin/pkg-config gtk+-3.0 --libs` -> 0
+-L/usr/lib/x86_64-linux-gnu -lgtk-3 -lgdk-3 -lpangocairo-1.0 -lpango-1.0 -lharfbuzz -latk-1.0 -lcairo-gobject -lcairo -lgdk_pixbuf-2.0 -lgio-2.0 -lgobject-2.0 -lglib-2.0
+PKG_CONFIG_PATH: 
+Called `/usr/bin/pkg-config gtk+-3.0 --libs` -> 0
+-lgtk-3 -lgdk-3 -lpangocairo-1.0 -lpango-1.0 -lharfbuzz -latk-1.0 -lcairo-gobject -lcairo -lgdk_pixbuf-2.0 -lgio-2.0 -lgobject-2.0 -lglib-2.0
+None of 'PKG_CONFIG_PATH' are defined in the environment, not changing global flags.
+Run-time dependency gtk+-3.0 found: YES 3.24.30
+Pkg-config binary for MachineChoice.HOST is cached.
+Determining dependency 'glib-2.0' with pkg-config executable '/usr/bin/pkg-config'
+PKG_CONFIG_PATH: 
+Called `/usr/bin/pkg-config --modversion glib-2.0` -> 0
+2.68.4
+PKG_CONFIG_PATH: 
+Called `/usr/bin/pkg-config --cflags glib-2.0` -> 0
+-I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include
+PKG_CONFIG_PATH: 
+Called `/usr/bin/pkg-config glib-2.0 --libs` -> 0
+-L/usr/lib/x86_64-linux-gnu -lglib-2.0
+PKG_CONFIG_PATH: 
+Called `/usr/bin/pkg-config glib-2.0 --libs` -> 0
+-lglib-2.0
+None of 'PKG_CONFIG_PATH' are defined in the environment, not changing global flags.
+Run-time dependency glib-2.0 found: YES 2.68.4
+Pkg-config binary for MachineChoice.HOST is cached.
+Determining dependency 'json-glib-1.0' with pkg-config executable '/usr/bin/pkg-config'
+PKG_CONFIG_PATH: 
+Called `/usr/bin/pkg-config --modversion json-glib-1.0` -> 0
+1.6.2
+PKG_CONFIG_PATH: 
+Called `/usr/bin/pkg-config --cflags json-glib-1.0` -> 0
+-pthread -I/usr/include/json-glib-1.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include
+PKG_CONFIG_PATH: 
+Called `/usr/bin/pkg-config json-glib-1.0 --libs` -> 0
+-L/usr/lib/x86_64-linux-gnu -ljson-glib-1.0 -lgio-2.0 -lgobject-2.0 -lglib-2.0
+PKG_CONFIG_PATH: 
+Called `/usr/bin/pkg-config json-glib-1.0 --libs` -> 0
+-ljson-glib-1.0 -lgio-2.0 -lgobject-2.0 -lglib-2.0
+None of 'PKG_CONFIG_PATH' are defined in the environment, not changing global flags.
+Run-time dependency json-glib-1.0 found: YES 1.6.2
+Pkg-config binary for MachineChoice.HOST is cached.
+Determining dependency 'gio-2.0' with pkg-config executable '/usr/bin/pkg-config'
+PKG_CONFIG_PATH: 
+Called `/usr/bin/pkg-config --modversion gio-2.0` -> 0
+2.68.4
+PKG_CONFIG_PATH: 
+Called `/usr/bin/pkg-config --cflags gio-2.0` -> 0
+-pthread -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include
+PKG_CONFIG_PATH: 
+Called `/usr/bin/pkg-config gio-2.0 --libs` -> 0
+-L/usr/lib/x86_64-linux-gnu -lgio-2.0 -lgobject-2.0 -lglib-2.0
+PKG_CONFIG_PATH: 
+Called `/usr/bin/pkg-config gio-2.0 --libs` -> 0
+-lgio-2.0 -lgobject-2.0 -lglib-2.0
+None of 'PKG_CONFIG_PATH' are defined in the environment, not changing global flags.
+Run-time dependency gio-2.0 found: YES 2.68.4
+Pkg-config binary for MachineChoice.HOST is cached.
+Determining dependency 'cairo' with pkg-config executable '/usr/bin/pkg-config'
+PKG_CONFIG_PATH: 
+Called `/usr/bin/pkg-config --modversion cairo` -> 0
+1.16.0
+PKG_CONFIG_PATH: 
+Called `/usr/bin/pkg-config --cflags cairo` -> 0
+-I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16
+PKG_CONFIG_PATH: 
+Called `/usr/bin/pkg-config cairo --libs` -> 0
+-L/usr/lib/x86_64-linux-gnu -lcairo
+PKG_CONFIG_PATH: 
+Called `/usr/bin/pkg-config cairo --libs` -> 0
+-lcairo
+None of 'PKG_CONFIG_PATH' are defined in the environment, not changing global flags.
+Run-time dependency cairo found: YES 1.16.0
+Pkg-config binary for MachineChoice.HOST is cached.
+Determining dependency 'pango' with pkg-config executable '/usr/bin/pkg-config'
+PKG_CONFIG_PATH: 
+Called `/usr/bin/pkg-config --modversion pango` -> 0
+1.48.10
+PKG_CONFIG_PATH: 
+Called `/usr/bin/pkg-config --cflags pango` -> 0
+-pthread -I/usr/include/pango-1.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/uuid -I/usr/include/harfbuzz -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/freetype2 -I/usr/include/libpng16
+PKG_CONFIG_PATH: 
+Called `/usr/bin/pkg-config pango --libs` -> 0
+-L/usr/lib/x86_64-linux-gnu -lpango-1.0 -lgobject-2.0 -lglib-2.0 -lharfbuzz
+PKG_CONFIG_PATH: 
+Called `/usr/bin/pkg-config pango --libs` -> 0
+-lpango-1.0 -lgobject-2.0 -lglib-2.0 -lharfbuzz
+None of 'PKG_CONFIG_PATH' are defined in the environment, not changing global flags.
+Run-time dependency pango found: YES 1.48.10
+Pkg-config binary for MachineChoice.HOST is cached.
+Determining dependency 'xkbcommon' with pkg-config executable '/usr/bin/pkg-config'
+PKG_CONFIG_PATH: 
+Called `/usr/bin/pkg-config --modversion xkbcommon` -> 0
+1.3.0
+PKG_CONFIG_PATH: 
+Called `/usr/bin/pkg-config --cflags xkbcommon` -> 0
+
+PKG_CONFIG_PATH: 
+Called `/usr/bin/pkg-config xkbcommon --libs` -> 0
+-L/usr/lib/x86_64-linux-gnu -lxkbcommon
+PKG_CONFIG_PATH: 
+Called `/usr/bin/pkg-config xkbcommon --libs` -> 0
+-lxkbcommon
+None of 'PKG_CONFIG_PATH' are defined in the environment, not changing global flags.
+Run-time dependency xkbcommon found: YES 1.3.0
+Pkg-config binary for MachineChoice.BUILD is not cached.
+None of 'PKG_CONFIG' are defined in the environment, not changing global flags.
+Pkg-config binary missing from cross or native file, or env var undefined.
+Trying a default Pkg-config fallback at pkg-config
+Found pkg-config: /usr/bin/pkg-config (0.29.2)
+Determining dependency 'glib-2.0' with pkg-config executable '/usr/bin/pkg-config'
+PKG_CONFIG_PATH: 
+Called `/usr/bin/pkg-config --modversion glib-2.0` -> 0
+2.68.4
+PKG_CONFIG_PATH: 
+Called `/usr/bin/pkg-config --cflags glib-2.0` -> 0
+-I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include
+PKG_CONFIG_PATH: 
+Called `/usr/bin/pkg-config glib-2.0 --libs` -> 0
+-L/usr/lib/x86_64-linux-gnu -lglib-2.0
+PKG_CONFIG_PATH: 
+Called `/usr/bin/pkg-config glib-2.0 --libs` -> 0
+-lglib-2.0
+None of 'PKG_CONFIG_PATH' are defined in the environment, not changing global flags.
 Program glib-compile-resources found: YES (/usr/bin/glib-compile-resources)
 Program glib-mkenums found: YES (/usr/bin/glib-mkenums)
 Program glib-mkenums found: YES (/usr/bin/glib-mkenums)
@@ -96,18 +282,5 @@ Program meson_post_install.py found: YES (/usr/bin/python3 /home/colin/IdeaProje
 Build targets in project: 6
 
 Found ninja-1.10.1 at /usr/bin/ninja
-Running compile:
-Working directory:  /home/colin/IdeaProjects/showmethekey/build/meson-private/tmpoq8whmqc
-Command line:  cc /home/colin/IdeaProjects/showmethekey/build/meson-private/tmpoq8whmqc/testfile.c -o /home/colin/IdeaProjects/showmethekey/build/meson-private/tmpoq8whmqc/output.obj -pipe -c -D_FILE_OFFSET_BITS=64 -O0 --print-search-dirs 
-
-Code:
- 
-Compiler stdout:
- install: /usr/lib/gcc/x86_64-linux-gnu/11/
-programs: =/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/bin/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/bin/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/bin/
-libraries: =/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/lib/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/lib/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../../lib/:/lib/x86_64-linux-gnu/11/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/11/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/lib/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../:/lib/:/usr/lib/
-
-Compiler stderr:
- 
 None of 'STRIP' are defined in the environment, not changing global flags.
 None of 'STRIP' are defined in the environment, not changing global flags.

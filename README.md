@@ -6,9 +6,28 @@ Show Me the Keys project that is designed to provide some additional
 options, such as changing the font size. For more information about the
 original project, see the [original repository](https://github.com/AlynxZhou/showmethekey.git).
 
-Many of the customization options here are provided for
-
 # Install
+
+## Install with scripts
+
+If you're lazy and just want to copy-paste a command, here you go.
+```
+$ git clone https://github.com/Wobblyyyy/showmethekey && cd showmethekey && ./install.sh
+```
+
+There are three scripts available for your use:
+- `build.sh`, which will build the project and install the latest version of
+  the application.
+- `dependencies.sh`, which will install all of the required dependencies.
+- `install.sh`, which will execute `depenencies.sh` then `build.sh`.
+
+If you just want to get a minimalistic version of SMTK+ running, all you
+have to do is:
+```
+$ git clone https://github.com/Wobblyyyy/showmethekey
+$ cd showmethekey
+$ ./install.sh
+```
 
 ## Build From Source
 

@@ -1,2 +1,0 @@
-/home/colin/IdeaProjects/showmethekey/build/meson-private/cmake_libudev/CMakeFiles/rebuild_cache.dir
-/home/colin/IdeaProjects/showmethekey/build/meson-private/cmake_libudev/CMakeFiles/edit_cache.dir

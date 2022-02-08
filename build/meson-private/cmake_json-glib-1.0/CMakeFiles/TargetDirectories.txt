@@ -1,2 +1,0 @@
-/home/colin/IdeaProjects/showmethekey/build/meson-private/cmake_json-glib-1.0/CMakeFiles/rebuild_cache.dir
-/home/colin/IdeaProjects/showmethekey/build/meson-private/cmake_json-glib-1.0/CMakeFiles/edit_cache.dir

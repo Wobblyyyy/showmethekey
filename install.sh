@@ -1,0 +1,2 @@
+./depenencies.sh
+./build.sh
