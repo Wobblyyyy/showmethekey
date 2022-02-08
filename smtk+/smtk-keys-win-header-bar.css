@@ -1,0 +1,11 @@
+window.smtk-keys-win headerbar.titlebar {
+    background-color: rgba(0, 0, 0, 0);
+    background-image: none;
+    min-height: 0px;
+    box-shadow: none;
+    border: none;
+}
+
+.GtkSwitch {
+    min-width: 500px;
+}

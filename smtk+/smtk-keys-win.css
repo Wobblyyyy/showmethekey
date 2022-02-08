@@ -1,0 +1,8 @@
+window.smtk-keys-win decoration {
+	margin: 0;
+	box-shadow: none;
+}
+
+.GtkSwitch {
+    min-width: 500px;
+}

@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+    <object class="GtkImage" id="menu_image">
+        <property name="visible">true</property>
+        <property name="icon_name">open-menu-symbolic</property>
+    </object>
+    <template class="SmtkAppWin" parent="GtkApplicationWindow">
+        <property name="visible">true</property>
+        <property name="icon-name">showmethekey</property>
+        <property name="title" translatable="yes">SMTK+</property>
+        <property name="default-width">1000</property>
+        <property name="default-height">800</property>
+        <child type="titlebar">
+            <object class="GtkHeaderBar" id="header">
+                <property name="visible">true</property>
+                <property name="title" translatable="yes">SMTK+</property>
+                <property name="show-close-button">true</property>
+                <child>
+                    <object class="GtkSwitch" id="keys_win_switch">
+                        <property name="visible">true</property>
+                        <property name="hexpand">true</property>
+                        <property name="halign">center</property>
+                        <property name="can-default">true</property>
+                        <signal
+                            name="notify::active"
+                            handler="smtk_app_win_on_keys_win_switch_active"
+                            object="SmtkAppWin"
+                            swapped="yes" />
+                    </object>
+                    <packing>
+                        <property name="pack_type">start</property>
+                    </packing>
+                </child>
+                <child>
+                    <object class="GtkMenuButton" id="menu_button">
+                        <property name="visible">true</property>
+                        <property name="use-popover">true</property>
+                        <property name="image">menu_image</property>
+                        <property name="tooltip-text" translatable="yes">Menu</property>
+                        </object>
+                        <packing>
+                            <property name="pack_type">end</property>
+                        </packing>
+                    </child>
+                </object>
+            </child>
+            <child>
+                <object class="GtkBox">
+                    <property name="visible">true</property>
+                    <property name="orientation">vertical</property>
+                    <property name="margin-top">10</property>
+                    <property name="margin-start">10</property>
+                    <property name="margin-bottom">10</property>
+                    <property name="margin-end">10</property>
+                    <property name="spacing">10</property>
+                    <child>
+                        <object class="GtkBox">
+                            <property name="visible">true</property>
+                            <property name="orientation">horizontal</property>
+                            <property name="spacing">10</property>
+                            <child>
+                                <object class="GtkLabel">
+                                    <property name="use-underline">true</property>
+                                    <property name="visible">true</property>
+                                    <property name="label" translatable="yes">Temporary _Hide</property>
+                                    <property name="mnemonic-widget">hide_switch</property>
+                                    <property name="hexpand">true</property>
+                                    <property name="halign">start</property>
+                                </object>
+                            </child>
+                            <child>
+                                <object class="GtkSwitch" id="hide_switch">
+                                    <property name="visible">true</property>
+                                    <property name="hexpand">false</property>
+                                    <property name="halign">end</property>
+                                    <property name="sensitive">false</property>
+                                    <signal
+                                        name="notify::active"
+                                        handler="smtk_app_win_on_hide_switch_active"
+                                        object="SmtkAppWin"
+                                        swapped="yes" />
+                                </object>
+                            </child>
+                        </object>
+                    </child>
+                    <child>
+                        <object class="GtkBox">
+                            <property name="visible">true</property>
+                            <property name="orientation">horizontal</property>
+                            <property name="spacing">10</property>
+                            <child>
+                                <object class="GtkLabel">
+                                    <property name="use-underline">true</property>
+                                    <property name="visible">true</property>
+                                    <property name="label" translatable="yes">Show _Mouse Button</property>
+                                    <property name="mnemonic-widget">mouse_switch</property>
+                                    <property name="hexpand">true</property>
+                                    <property name="halign">start</property>
+                                </object>
+                            </child>
+                            <child>
+                                <object class="GtkSwitch" id="mouse_switch">
+                                    <property name="visible">true</property>
+                                    <property name="hexpand">false</property>
+                                    <property name="halign">end</property>
+                                    <property name="active">true</property>
+                                </object>
+                            </child>
+                        </object>
+                    </child>
+                    <child>
+                        <object class="GtkBox">
+                            <property name="visible">true</property>
+                            <property name="orientation">horizontal</property>
+                            <property name="spacing">10</property>
+                            <child>
+                                <object class="GtkLabel">
+                                    <property name="visible">true</property>
+                                    <property name="label" translatable="yes">Display Mode</property>
+                                    <property name="hexpand">true</property>
+                                    <property name="halign">start</property>
+                                </object>
+                            </child>
+                            <child>
+                                <object class="GtkComboBoxText" id="mode_selector">
+                                    <property name="visible">true</property>
+                                    <property name="hexpand">true</property>
+                                    <property name="halign">end</property>
+                                    <property name="active-id">composed</property>
+                                    <items>
+                                        <item translatable="yes" id="composed">Composed</item>
+                                        <item translatable="yes" id="raw">Raw</item>
+                                    </items>
+                                </object>
+                            </child>
+                        </object>
+                    </child>
+                    <child>
+                        <object class="GtkBox">
+                            <property name="visible">true</property>
+                            <property name="orientation">horizontal</property>
+                            <property name="spacing">10</property>
+                            <child>
+                                <object class="GtkLabel">
+                                    <property name="visible">true</property>
+                                    <property name="label" translatable="yes">Width (px)</property>
+                                    <property name="hexpand">true</property>
+                                    <property name="halign">start</property>
+                                </object>
+                            </child>
+                            <child>
+                                <object class="GtkSpinButton" id="width_entry">
+                                    <property name="visible">true</property>
+                                    <property name="hexpand">true</property>
+                                    <property name="halign">end</property>
+                                    <property name="digits">0</property>
+                                    <property name="text">1500</property>
+                                </object>
+                            </child>
+                        </object>
+                    </child>
+                    <child>
+                        <object class="GtkBox">
+                            <property name="visible">true</property>
+                            <property name="orientation">horizontal</property>
+                            <child>
+                                <object class="GtkLabel">
+                                    <property name="visible">true</property>
+                                    <property name="label" translatable="yes">Height (px)</property>
+                                    <property name="hexpand">true</property>
+                                    <property name="halign">start</property>
+                                </object>
+                            </child>
+                            <child>
+                                <object class="GtkSpinButton" id="height_entry">
+                                    <property name="visible">true</property>
+                                    <property name="hexpand">true</property>
+                                    <property name="halign">end</property>
+                                    <property name="digits">0</property>
+                                    <property name="text">200</property>
+                                </object>
+                            </child>
+                        </object>
+                    </child>
+                    <child>
+                        <object class="GtkBox">
+                            <property name="visible">true</property>
+                            <property name="orientation">horizontal</property>
+                            <child>
+                                <object class="GtkLabel">
+                                    <property name="visible">true</property>
+                                    <property name="label" translatable="yes">Timeout (ms)</property>
+                                    <property name="hexpand">true</property>
+                                    <property name="halign">start</property>
+                                </object>
+                            </child>
+                            <child>
+                                <object class="GtkSpinButton" id="timeout_entry">
+                                    <property name="visible">true</property>
+                                    <property name="hexpand">true</property>
+                                    <property name="halign">end</property>
+                                    <property name="digits">0</property>
+                                    <property name="text">0</property>
+                                </object>
+                            </child>
+                        </object>
+                    </child>
+                    <child>
+                        <object class="GtkBox">
+                            <property name="visible">true</property>
+                            <property name="orientation">horizontal</property>
+                            <child>
+                                <object class="GtkLabel">
+                                    <property name="visible">true</property>
+                                    <property name="label" translatable="yes">Font size coefficient</property>
+                                    <property name="hexpand">true</property>
+                                    <property name="halign">start</property>
+                                </object>
+                            </child>
+                            <child>
+                                <object class="GtkSpinButton" id="fontsizeentry">
+                                    <property name="visible">true</property>
+                                    <property name="hexpand">true</property>
+                                    <property name="halign">end</property>
+                                    <property name="digits">0</property>
+                                    <property name="text">0</property>
+                                </object>
+                            </child>
+                        </object>
+                    </child>
+                </object>
+            </child>
+        </template>
+    </interface>

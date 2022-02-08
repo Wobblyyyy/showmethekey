@@ -1,0 +1,8 @@
+/* Some theme has dark text color for label, change it. */
+window.smtk-keys-win label {
+	color: rgba(255, 255, 255, 0.9);
+}
+
+.GtkSwitch {
+    min-width: 500px;
+}

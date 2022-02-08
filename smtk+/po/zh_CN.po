@@ -1,0 +1,152 @@
+# Chinese translations for showmethekey package.
+# Copyright (C) 2021 THE showmethekey'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the showmethekey package.
+# Automatically generated, 2021.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: showmethekey\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-11-01 15:07+0800\n"
+"PO-Revision-Date: 2021-04-21 15:16+0800\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: showmethekey-gtk/smtk-app.c:57 showmethekey-gtk/smtk-app-win.c:332
+#: showmethekey-gtk/smtk-app-win.ui:52 showmethekey-gtk/smtk-app-win.ui:58
+msgid "SMTK+"
+msgstr "让我看键"
+
+#: showmethekey-gtk/smtk-app.c:62
+msgid "Display version then exit."
+msgstr "显示版本号然后退出。"
+
+#: showmethekey-gtk/smtk-app-win.c:264
+msgid ""
+"Usage:\n"
+"\n"
+"1. Please input your password after toggling the switch, because it needs "
+"superuser permission to read input events, and Wayland does not allow "
+"running graphics program with superuser permission, so it uses polkit to run "
+"a backend with superuser permission. This program does not handle or store "
+"your password.\n"
+"\n"
+"2. After you toggle the switch to show the floating window, you need to drag "
+"it manually to anywhere you want, because Wayland does not allow window to "
+"set its position. Though the floating window is mostly transparent for "
+"click, the \"Clickable Area\" label on titlebar are clickable and can be "
+"dragged as a handle.\n"
+"\n"
+"3. Because Wayland does not allow a window to set \"Always on Top\" and "
+"\"Always on Visible Workspace\" by itself, you should set it manually if you "
+"are in a Wayland session and your window manager support it.\n"
+"For example if you are using GNOME Shell (Wayland), you can right click the "
+"\"Clickable Area\" on title bar to show a window manager menu and check "
+"\"Always on Top\" and \"Always on Visible Workspace\" in it.\n"
+"If you are using KDE Plasma (Wayland), you can right click \"Floating Window "
+"- SMTK+\" on task bar, check \"Move to Desktop\" -> \"All Desktops"
+"\" and \"More Actions\" -> \"Keep Above Others\".\n"
+"\n"
+"4. If you want to temporary pause it (for example you need to insert "
+"password), you can use the \"Temporary Hide\" switch, it will not record "
+"your keys while hiding.\n"
+"\n"
+"5. Set Timeout to 0 if you want to keep all keys.\n"
+"\n"
+"You can open this dialog again via menu icon on title bar -> \"Usage\"."
+msgstr ""
+"使用说明：\n"
+"\n"
+"1. 请在打开开关之后输入您的密码，因为读取输入事件需要超级用户权限，并且 "
+"Wayland 不允许图形程序以超级用户权限运行，所以这个程序使用 polkit 来运行一个"
+"具有超级用户权限的后端。这个程序并不处理或储存您的密码。\n"
+"\n"
+"2. 在打开开关显示悬浮窗口之后，您需要手动拖拽它到您想要的位置，因为 Wayland "
+"不允许窗口自行设定位置。尽管悬浮窗口的大部分面积都无法点击，标题栏上的“可点击"
+"区域”标签仍然是可以点击的并且可以作为把手来拖拽。\n"
+"\n"
+"3. 因为 Wayland 不允许窗口自行设置“置顶”和“总在可见工作区”，所以如果你在使用 "
+"Wayland 会话，您需要手动设置这两种功能，如果您的窗口管理器支持的话。\n"
+"例如如果您在使用 GNOME Shell (Wayland)，您可以右键点击标题栏上的“可点击区"
+"域”来显示窗口管理器菜单并勾选“置顶”和“总在可见工作区”。\n"
+"如果您在使用 KDE Plasma (Wayland)，您可以右键点击任务栏上的“悬浮窗口 - 让我看"
+"键”，勾选“移动到桌面”->“全部桌面”和“更多动作”->“常居顶端”。\n"
+"\n"
+"4. 如果您想要临时暂停该程序（比如你需要输入密码），您可以使用“临时隐藏”开关，"
+"在隐藏状态下它不会记录您的按键。\n"
+"\n"
+"5. 如果想保留所有的按键记录，请将超时设为 0。\n"
+"\n"
+"您可以通过标题栏上的菜单按钮 ->“使用说明”来再次访问此对话框。"
+
+#: showmethekey-gtk/smtk-app-win.c:330
+msgid "translator-credits"
+msgstr "Alynx Zhou"
+
+#: showmethekey-gtk/smtk-app-win.c:331
+msgid "About SMTK+"
+msgstr "关于让我看键"
+
+#: showmethekey-gtk/smtk-app-win.c:333
+msgid "Show keys you typed on screen."
+msgstr "在屏幕上显示你按的键。"
+
+#: showmethekey-gtk/smtk-app-win.ui:85
+msgid "Menu"
+msgstr "菜单"
+
+#: showmethekey-gtk/smtk-app-win.ui:113
+msgid "Temporary _Hide"
+msgstr "临时隐藏（_H）"
+
+#: showmethekey-gtk/smtk-app-win.ui:143
+msgid "Show _Mouse Button"
+msgstr "显示鼠标按钮（_M）"
+
+#: showmethekey-gtk/smtk-app-win.ui:167
+msgid "Display Mode"
+msgstr "显示模式"
+
+#: showmethekey-gtk/smtk-app-win.ui:180
+msgid "Composed"
+msgstr "组合键"
+
+#: showmethekey-gtk/smtk-app-win.ui:181
+msgid "Raw"
+msgstr "按键名"
+
+#: showmethekey-gtk/smtk-app-win.ui:195
+msgid "Width (px)"
+msgstr "宽度（像素）"
+
+#: showmethekey-gtk/smtk-app-win.ui:219
+msgid "Height (px)"
+msgstr "高度（像素）"
+
+#: showmethekey-gtk/smtk-app-win.ui:243
+msgid "Timeout (ms)"
+msgstr "超时（毫秒）"
+
+#: showmethekey-gtk/smtk-app-win-menu.ui:6
+msgid "_Usage"
+msgstr "使用说明（_U）"
+
+#: showmethekey-gtk/smtk-app-win-menu.ui:10
+msgid "_About SMTK+"
+msgstr "关于让我看键（_A）"
+
+#: showmethekey-gtk/smtk-app-win-menu.ui:16
+msgid "_Quit"
+msgstr "退出（_Q）"
+
+#: showmethekey-gtk/smtk-keys-win.c:145
+msgid "Clickable Area"
+msgstr "可点击区域"
+
+#: showmethekey-gtk/smtk-keys-win.c:305
+msgid "Floating Window - SMTK+"
+msgstr "悬浮窗口 - 让我看键"
