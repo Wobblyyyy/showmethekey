@@ -77,7 +77,7 @@ static int print_key_event(struct libinput_event *event)
 		libinput_event_keyboard_get_key_state(keyboard);
 	const char *state_name = state_code == LIBINPUT_KEY_STATE_PRESSED ?
 					 "PRESSED" :
-					 "RELEASED";
+					       "RELEASED";
 
 	return printf("{"
 		      "\"event_name\": \"KEYBOARD_KEY\", "
@@ -109,7 +109,7 @@ static int print_button_event(struct libinput_event *event)
 		libinput_event_pointer_get_button_state(pointer);
 	const char *state_name = state_code == LIBINPUT_BUTTON_STATE_PRESSED ?
 					 "PRESSED" :
-					 "RELEASED";
+					       "RELEASED";
 	return printf("{"
 		      "\"event_name\": \"POINTER_BUTTON\", "
 		      "\"event_type\": %d, "

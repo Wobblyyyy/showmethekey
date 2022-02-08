@@ -18,7 +18,7 @@ struct _SmtkAppWin {
 	GtkWidget *width_entry;
 	GtkWidget *height_entry;
 	GtkWidget *timeout_entry;
-    GtkWidget *fontsizeentry;
+	GtkWidget *fontsizeentry;
 	GtkWidget *keys_win;
 };
 G_DEFINE_TYPE(SmtkAppWin, smtk_app_win, GTK_TYPE_APPLICATION_WINDOW)
@@ -81,14 +81,15 @@ static void smtk_app_win_on_keys_win_switch_active(SmtkAppWin *win,
 				GTK_SPIN_BUTTON(win->height_entry));
 			gint timeout = gtk_spin_button_get_value_as_int(
 				GTK_SPIN_BUTTON(win->timeout_entry));
-            gint fontsize = gtk_spin_button_get_value_as_int(
-                GTK_SPIN_BUTTON(win->fontsizeentry));
+			gint fontsize = gtk_spin_button_get_value_as_int(
+				GTK_SPIN_BUTTON(win->fontsizeentry));
 			height = height <= 0 ? 200 : height;
 			g_debug("Size: %dx%d.", width, height);
 			GError *error = NULL;
-			win->keys_win = smtk_keys_win_new(
-				show_mouse, mode, width, height, timeout, 
-                fontsize, &error);
+			win->keys_win = smtk_keys_win_new(show_mouse, mode,
+							  width, height,
+							  timeout, fontsize,
+							  &error);
 			if (win->keys_win == NULL) {
 				g_warning("%s", error->message);
 				g_error_free(error);
@@ -165,10 +166,13 @@ static void smtk_app_win_init(SmtkAppWin *win)
 	gtk_spin_button_set_increments(GTK_SPIN_BUTTON(win->height_entry), 100,
 				       500);
 
-	gtk_spin_button_set_range(GTK_SPIN_BUTTON(win->timeout_entry), 0, 30000);
-	gtk_spin_button_set_increments(GTK_SPIN_BUTTON(win->timeout_entry), 100, 1000);
+	gtk_spin_button_set_range(GTK_SPIN_BUTTON(win->timeout_entry), 0,
+				  30000);
+	gtk_spin_button_set_increments(GTK_SPIN_BUTTON(win->timeout_entry), 100,
+				       1000);
 	gtk_spin_button_set_range(GTK_SPIN_BUTTON(win->fontsizeentry), 1, 1000);
-	gtk_spin_button_set_increments(GTK_SPIN_BUTTON(win->fontsizeentry), 10, 100);
+	gtk_spin_button_set_increments(GTK_SPIN_BUTTON(win->fontsizeentry), 10,
+				       100);
 
 	win->settings = g_settings_new("one.alynx.showmethekey");
 	g_settings_bind(win->settings, "show-mouse", win->mouse_switch,
@@ -183,8 +187,8 @@ static void smtk_app_win_init(SmtkAppWin *win)
 			G_SETTINGS_BIND_DEFAULT);
 	g_settings_bind(win->settings, "timeout", win->timeout_entry, "value",
 			G_SETTINGS_BIND_DEFAULT);
-	g_settings_bind(win->settings, "fontsizeentry", win->fontsizeentry, "value",
-			G_SETTINGS_BIND_DEFAULT);
+	g_settings_bind(win->settings, "fontsizeentry", win->fontsizeentry,
+			"value", G_SETTINGS_BIND_DEFAULT);
 
 	if (g_settings_get_boolean(win->settings, "first-time")) {
 		smtk_app_win_show_usage_dialog(win);
@@ -340,8 +344,8 @@ void smtk_app_win_show_about_dialog(SmtkAppWin *win)
 	gtk_show_about_dialog(GTK_WINDOW(win), "authors", authors, "artists",
 			      artists, "documenters", documenters,
 			      "translator-credits", _("translator-credits"),
-			      "title", _("About SMTK+"),
-			      "program-name", _("SMTK+"), "comments",
+			      "title", _("About SMTK+"), "program-name",
+			      _("SMTK+"), "comments",
 			      _("Show keys you typed on screen."), "copyright",
 			      "Copyright © 2021 Alynx Zhou", "license", license,
 			      "logo-icon-name", "showmethekey", "website",

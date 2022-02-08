@@ -150,10 +150,8 @@ static void trigger_idle_function(SmtkKeysEmitter *emitter)
 	// instead of UI thread.
 	// `g_idle_add()` is not suitable because we
 	// have a high priority.
-	g_timeout_add_full(G_PRIORITY_DEFAULT, 0,
-			   idle_function,
-			   g_object_ref(emitter),
-			   idle_destroy_function);
+	g_timeout_add_full(G_PRIORITY_DEFAULT, 0, idle_function,
+			   g_object_ref(emitter), idle_destroy_function);
 }
 
 static gpointer poller_function(gpointer user_data)
@@ -242,7 +240,8 @@ static gpointer poller_function(gpointer user_data)
 	return NULL;
 }
 
-static gpointer timer_function(gpointer user_data) {
+static gpointer timer_function(gpointer user_data)
+{
 	SmtkKeysEmitter *emitter = SMTK_KEYS_EMITTER(user_data);
 	while (emitter->timer_running) {
 		g_mutex_lock(&emitter->keys_mutex);
@@ -251,7 +250,8 @@ static gpointer timer_function(gpointer user_data) {
 
 		if (emitter->timeout > 0 && elapsed > emitter->timeout) {
 			g_mutex_lock(&emitter->keys_mutex);
-			g_ptr_array_remove_range(emitter->keys_array, 0, emitter->keys_array->len - 1);
+			g_ptr_array_remove_range(emitter->keys_array, 0,
+						 emitter->keys_array->len - 1);
 			g_timer_start(emitter->timer);
 			g_mutex_unlock(&emitter->keys_mutex);
 
@@ -329,13 +329,12 @@ static void smtk_keys_emitter_class_init(SmtkKeysEmitterClass *emitter_class)
 					  obj_properties);
 }
 
-SmtkKeysEmitter *smtk_keys_emitter_new(gboolean show_mouse, SmtkKeyMode mode, gint timeout,
-				       GError **error)
+SmtkKeysEmitter *smtk_keys_emitter_new(gboolean show_mouse, SmtkKeyMode mode,
+				       gint timeout, GError **error)
 {
 	SmtkKeysEmitter *emitter = g_object_new(SMTK_TYPE_KEYS_EMITTER, "mode",
 						mode, "show-mouse", show_mouse,
-						"timeout", timeout,
-						NULL);
+						"timeout", timeout, NULL);
 
 	if (emitter->error != NULL) {
 		g_propagate_error(error, emitter->error);
@@ -387,7 +386,8 @@ void smtk_keys_emitter_start_async(SmtkKeysEmitter *emitter, GError **error)
 	emitter->timer_running = TRUE;
 	emitter->timer = g_timer_new();
 
-	emitter->timer_thread = g_thread_try_new("timer", timer_function, emitter, error);
+	emitter->timer_thread =
+		g_thread_try_new("timer", timer_function, emitter, error);
 	if (emitter->timer_thread == NULL)
 		return;
 }

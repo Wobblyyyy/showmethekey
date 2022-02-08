@@ -18,8 +18,8 @@ typedef enum {
 } SmtkKeyMode;
 // clang-format on
 
-SmtkKeysEmitter *smtk_keys_emitter_new(gboolean show_mouse, SmtkKeyMode mode, gint timeout,
-				       GError **error);
+SmtkKeysEmitter *smtk_keys_emitter_new(gboolean show_mouse, SmtkKeyMode mode,
+				       gint timeout, GError **error);
 void smtk_keys_emitter_start_async(SmtkKeysEmitter *emitter, GError **error);
 void smtk_keys_emitter_stop_async(SmtkKeysEmitter *emitter);
 void smtk_keys_emitter_pause(SmtkKeysEmitter *emitter);
