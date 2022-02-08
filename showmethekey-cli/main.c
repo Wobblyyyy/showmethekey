@@ -171,14 +171,14 @@ static void run_mainloop(struct libinput *libinput)
 
 void print_help(char *program_name)
 {
-	printf("The backend of Show Me The Key.\n");
+	printf("The backend of SMTK+.\n");
 	printf("Version " PROJECT_VERSION ".\n");
 	printf("Usage: %s [OPTION…]\n", program_name);
 	printf("Options:\n");
 	printf("\t-h, --help\tDisplay help then exit.\n");
 	printf("\t-v, --version\tDisplay version then exit.\n");
 	printf("Warning: This is the backend and is not designed to run "
-	       "by users. You should run the frontend of Show Me The Key, "
+	       "by users. You should run the frontend of SMTK+, "
 	       "and the frontend will run this.\n");
 }
 

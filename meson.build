@@ -28,7 +28,7 @@ configure_file(
 
 subdir('showmethekey-cli')
 
-subdir('showmethekey-gtk')
+subdir('smtk+')
 
 install_data(
   'LICENSE',

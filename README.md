@@ -1,59 +1,14 @@
-Show Me The Key
+SMTK+
 ===============
 
-Show keys you typed on screen.
-------------------------------
+Shows keys typed on the screen. This project is a fork of the original
+Show Me the Keys project that is designed to provide some additional
+options, such as changing the font size. For more information about the
+original project, see the [original repository](https://github.com/AlynxZhou/showmethekey.git).
 
-[Project Website](https://showmethekey.alynx.one/)
-
-A SUSE Hack Week 20 Project: [Show Me The Key: A screenkey alternative that works under Wayland via libinput](https://hackweek.suse.com/20/projects/a-screenkey-alternative-that-works-under-wayland-via-reading-evdev-directly).
+Many of the customization options here are provided for
 
 # Install
-
-## Distribution Package (Recommanded)
-
-### AOSC OS
-
-Just run following command to install from offcial repository:
-
-```
-# apt install showmethekey
-```
-
-### Arch Linux
-
-#### Install From AUR
-
-```
-$ yay showmethekey
-```
-
-Or use other AUR helpers.
-
-#### Install From `archlinuxcn`
-
-First [add archlinuxcn repo to your system](ttps://www.archlinuxcn.org/archlinux-cn-repo-and-mirror/).
-
-```
-# pacman -S showmethekey
-```
-
-### openSUSE
-
-#### Install from OBS
-
-Packages can be found in [my OBS project](https://build.opensuse.org/package/show/home:AZhou/showmethekey).
-
-```
-# zypper ar https://download.opensuse.org/repositories/home:/AZhou/openSUSE_Tumbleweed/home:AZhou.repo
-# zypper in showmethekey showmethekey-lang
-```
-
-Leap users please replace URL for Tumbleweed with URL for your Leap version.
-
-### Other Distributions
-
-Please help package showmethekey to your distribution!
 
 ## Build From Source
 
@@ -81,6 +36,12 @@ $ mkdir build && cd build && meson setup --prefix=/usr . .. && meson compile && 
 $ showmethekey-gtk
 ```
 
+You can also use the build.sh script:
+```
+$ chmod +x build.sh
+$ ./build.sh
+```
+
 # Usage
 
 For detailed usage please run usage dialog from app menu!
@@ -93,7 +54,7 @@ There is no official Wayland protocol allowing toplevel clients to set their own
 
 For example if you are using GNOME Shell (Wayland), you can right click the "Clickable Area" on title bar to show a window manager menu and check "Always on Top" and "Always on Visible Workspace" in it.
 
-If you are using KDE Plasma (Wayland), you can right click "Floating Window - Show Me The Key" on task bar, check "Move to Desktop" -> "All Desktops" and "More Actions" -> "Keep Above Others".
+If you are using KDE Plasma (Wayland), you can right click "Floating Window - SMTK+" on task bar, check "Move to Desktop" -> "All Desktops" and "More Actions" -> "Keep Above Others".
 
 # Feature
 
@@ -129,7 +90,7 @@ If you want to add languages, first add a country code in `showmethekey-gtk/po/L
 
 # Name
 
-As I want some clear name that hints its usage, but `screenkey` is already taken and I think `visualkey` sounds like `Visual Studio` and it's horrible. My friend [@LGiki](https://github.com/LGiki) suggests `Show Me The Key` which sounds like "Show me the code" from Linus Torvalds. At first I think it's a little bit long, but now it is acceptable so it's called `showmethekey` or `Show Me The Key`.
+As I want some clear name that hints its usage, but `screenkey` is already taken and I think `visualkey` sounds like `Visual Studio` and it's horrible. My friend [@LGiki](https://github.com/LGiki) suggests `SMTK+` which sounds like "Show me the code" from Linus Torvalds. At first I think it's a little bit long, but now it is acceptable so it's called `showmethekey` or `Show Me The Key`.
 
 The Chinese translate of this program name should be `让我看键`, and it's only used for window title, debug output, package name and desktop entry name should not be translated.
 
